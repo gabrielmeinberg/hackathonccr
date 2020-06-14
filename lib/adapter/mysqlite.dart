@@ -34,7 +34,7 @@ class AppointmentDB {
 
   Future<List<Map>> getAppointment() async {
     Database _db = await createDB();
-    var result = await _db.rawQuery('SELECT * FROM Cart');
+    var result = await _db.rawQuery('SELECT * FROM appointment');
     if (result != null) {
       return result.toList();
     }
